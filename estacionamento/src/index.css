@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+@theme {
+  --color-dark: #0A0A0A;
+  --color-dark-surface: #111111;
+  --color-dark-border: #222222;
+  
+  --color-neon-green: #00ff00;
+  --color-neon-green-dim: rgba(0, 255, 0, 0.1);
+  --color-neon-red: #ff3333;
+  
+  --font-mono: 'Space Mono', 'JetBrains Mono', 'Courier New', monospace;
+  --font-sans: 'Inter', system-ui, sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-dark text-gray-300 font-sans antialiased m-0 p-0 overflow-x-hidden;
+  }
+  
+  input {
+    @apply bg-dark-surface border border-dark-border text-white px-4 py-2 outline-none focus:border-neon-green transition-colors font-mono;
+  }
+  
+  button {
+    @apply font-mono uppercase tracking-wider font-bold transition-all active:scale-95;
+  }
+}
